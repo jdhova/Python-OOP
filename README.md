@@ -201,34 +201,41 @@ class GrandFather:
 
 
 class Father(GrandFather):
-    def __init__(self, fathersname):
-        GrandFather.__init__(self, fathersname)
+    def __init__(self, fathersname,gname):
+        GrandFather.__init__(self, gname)
+        self.fathersname = fathersname
+        self.gname = gname
 
     def father_occupation(self):
-        return 'CEO of company'
+        return f'CEO of company'
+
+    def display(self):
+        return (f'My former name was {self.fathersname} and my fathers former name was {self.gname}'
+                f'I am the {self.father_occupation()} and my father is the {self.occupation()}')
 #
 class Son(Father):
     def __init__(self, sonsname,gname,fathersname):
         GrandFather.__init__(self, gname)
-        Father.__init__(self, fathersname)
+        Father.__init__(self, fathersname,gname)
         self.sonsname = sonsname
 
     def son_occupation(self):
         return 'VP of company'
 
     def display(self):
-        return (f'my grand Fathers name is {self.gname} and name is {self.sonsname} '
-                f' my granf Fathers  is {self.occupation()} and fathers occupation is {self.father_occupation()}'
+        return (f'my grand Fathers name is {self.gname} and '
+                f' fathers name is {self.fathersname} and'
+                f' my name is {self.sonsname}'
+                f' my grand Fathers is {self.occupation()} and fathers occupation is {self.father_occupation()}'
                 f' and I am from {self.Citizenship} and my job is {self.son_occupation()}')
 
 # #
-Son1 = Son('Jude','Coleman','Davidson')
+Son1 = Son('Jude','Coles','Adams')
+Father1 = Father('ColesMan','AdamsMan')
 
 print(Son1.display())
-# Father1 = Father('Richerdson')
-# Son1 = Son()
-#
-# print(Father1.gname)
+
+print(Father1.display())
 
 
 ```
