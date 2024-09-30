@@ -239,3 +239,33 @@ print(Father1.display())
 
 
 ```
+
+#### Method Resolution Order, gives an order of inheritance
+
+### ABSTRACTION
+
+#### Abstraction is similar to hiding the details of a function and other methods can over ride from the parent class
+#### @abstraction methods must be declared to make methods abstract
+#### we must mport ABC from abstractmethods
+#### all sub classed must have method of the parent abstract class
+#### Abstract Based Clases
+
+
+#### Access Modifiers __Private _Protected and Public
+
+
+
+
+
+
+
+
+
+### QUIZ
+
+1. classes to show Mult level inheritance
+2. classes should have hidden class where lower classes abstract methods 
+3. classes must have access modifies where methods can be assesed public private and protected
+
+
+
